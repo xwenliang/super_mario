@@ -1,0 +1,225 @@
+/*
+ * Globle Css Document
+ * @ Author: zooble
+ * @ Email: wenliang.web@gmail.com
+ * @ Date: 2013-5-6
+ */
+@charset "utf-8";
+@import "base.mixin.less";
+
+html{
+	min-height: 100%;
+	overflow-y: scroll;
+}
+body{
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	font: normal 14px/1.5 'Menlo', Arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53';
+}
+p,ol,ul,li,dt,dd,dl,pre,form,fieldset,input,textarea,blockquote,em,i,b,hr,h1,h2,h3,h4,h5,h6{
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+	font-weight: normal;
+}
+h1,h2{
+	font-weight: bold;
+}
+h2{
+	font-size: 14px;
+}
+ol,ul{
+	list-style: none;
+}
+select,div{
+	outline: medium;
+}
+button,input{
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	outline: medium;
+	font: normal 14px/1.5 'Menlo', Arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53';
+}
+input{
+	border: 1px solid #ddd;
+	padding: 0 5px;
+	height: 24px;
+}
+img{
+	vertical-align: top;
+	border: none;
+}
+button,a{
+	font: normal 14px/1.5 'Menlo', Arial, '\5FAE\8F6F\96C5\9ED1', '\5b8b\4f53';
+	text-decoration: none;
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover{
+	color: #48a623;
+}
+
+
+
+.mountBig{
+	position: absolute;
+	width: 162px;
+	height: 72px;
+	background: url(../img/all.png) -191px -309px no-repeat;
+}
+.mount{
+	position: absolute;
+	width: 98px;
+	height: 40px;
+	background: url(../img/all.png) -89px -341px no-repeat;
+}
+.shrubBig{
+	position: absolute;
+	background: url(../img/all.png) no-repeat -163px -495px;
+	width: 130px;
+	height: 34px;
+}
+.shrubMid{
+	position: absolute;
+	background: url(../img/all.png) no-repeat -295px -495px;
+	width: 98px;
+	height: 34px;
+}
+.shrub{
+	position: absolute;
+	background: url(../img/all.png) no-repeat -95px -495px;
+	width: 66px;
+	height: 34px;
+}
+.cloudBig{
+	position: absolute;
+	background: url(../img/all.png) no-repeat -185px -385px;
+	width: 130px;
+	height: 50px;
+}
+.cloudMid{
+	position: absolute;
+	background: url(../img/all.png) no-repeat -85px -385px;
+	width: 98px;
+	height: 50px;
+}
+.cloud{
+	position: absolute;
+	background: url(../img/all.png) no-repeat -317px -385px;
+	width: 66px;
+	height: 50px;
+}
+.ask{
+	position: absolute;
+	background: url(../img/all.png) no-repeat -809px -309px;
+	width: 34px;
+	height: 34px;
+}
+.wall{
+	width: 100%;
+	height: 100%;
+	background: url(../img/wall1.png) repeat;
+}
+.wall1{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -739px -83px;
+	width: 34px;
+	height: 34px;
+}
+.wall2{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -739px -193px;
+	width: 34px;
+	height: 36px;
+}
+.wall3{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -739px -157px;
+	width: 34px;
+	height: 34px;
+}
+.wall4{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -739px -273px;
+	width: 34px;
+	height: 34px;
+	z-index: 1;
+}
+.pip{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -1221px -81px;
+	width: 66px;
+	height: 66px;
+	z-index: 1;
+}
+.pipShort{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -1225px -153px;
+	width: 58px;
+	height: 34px;
+	z-index: 1;
+}
+.breakup{
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	z-index: 2;
+	background: #5c94fc;
+}
+.breakupMid{
+	position: absolute;
+	width: 96px;
+	height: 64px;
+	z-index: 2;
+	background: #5c94fc;
+}
+.castleBig{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -779px -1009px;
+	width: 302px;
+	height: 354px;
+}
+.castle{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -537px -425px;
+	width: 162px;
+	height: 162px;
+}
+.flag{
+	position: absolute;
+	background: url('../img/all.png') no-repeat -513px -81px;
+	width: 52px;
+	height: 338px;
+}
+
+.game{
+	position: relative;
+	width: 512px;
+	height: 512px;
+	margin: 10px auto;
+	//overflow: hidden;
+	border: 1px solid #000;
+	.conent{
+		position: absolute;
+		width: 10000%;
+		height: 100%;
+		left: 0;
+		bottom: 0;
+		.footer{
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 64px;
+		}
+	}
+}
+.round1-1{
+	background: #5c94fc;
+}
+
+

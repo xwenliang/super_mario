@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link type="text/css" rel="stylesheet" href="/css/common.less">
+	<!--STYLE_PLACEHOLDER-->
+</head>
+<body>
+
+
+	<div class="game round1-1">
+		
+		<div id="content" class="conent" style="left: -6000px;transition: all 10s linear">
+			<!--地面岩石-->
+			<div class="footer">
+				<div class="wall"></div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<script src="js/mod.js"></script>
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<!--SCRIPT_PLACEHOLDER-->
+	<script>
+		var $ = require('Zepto');
+		console.time('start');
+		var round11Conf = {
+			mountBig: ['0*64', '1546*64', '3035*64', '4606*64', '6176*64'],
+			mount: ['513*64', '2055*64', '3584*64', '5118*64'],
+			shrubBig: ['360*64', '1912*64', '3440*64'],
+			shrubMid: ['1342*64', '2865*64', '4397*64'],
+			shrub: ['753*64', '2290*64', '5040*64', '5355*64'],
+			cloudBig: ['888*360', '2410*340', '3950*340'],
+			cloudMid: ['1178*380', '2700*380'],
+			cloud: ['260*364', '620*414', '3320*325', '3700*360', '6450*360'],
+			pip: ['906*64', '1226*95', '1482*126', '1834*126', '5215*64', '5727*64'],
+			pipShort: ['1230*64', '1486*64', '1486*95', '1838*64', '1838*95'],
+			breakupMid: ['2752*0'],
+			breakup: ['2208*0', '4896*0'],
+			flag: ['6350*64'],
+			castle: ['6494*64'],
+			ask: [
+				{
+					baseCoor: '510*160',
+					matrix: [
+						[1]
+					]
+				},
+				{
+					baseCoor: '667*160',
+					matrix: [
+						[0, 1, 0],
+						[0, 0, 0],
+						[0, 0, 0],
+						[0, 0, 0],
+						[1, 0, 1]
+					]
+				},
+				{
+					baseCoor: '2492*160',
+					matrix: [
+						[1]
+					]
+				},
+				{
+					baseCoor: '3390*160',
+					matrix: [
+						[0, 0, 0, 1, 0, 0, 0],
+						[0, 0, 0, 0, 0, 0, 0],
+						[0, 0, 0, 0, 0, 0, 0],
+						[0, 0, 0, 0, 0, 0, 0],
+						[1, 0, 0, 1, 0, 0, 1]
+					]
+				},
+				{
+					baseCoor: '4126*288',
+					matrix: [
+						[1, 1]
+					]
+				},
+				{
+					baseCoor: '5439*160',
+					matrix: [
+						[1]
+					]
+				}
+			],
+			wall1: [
+				{
+					baseCoor: '635*160',
+					matrix: [
+						[1, 0, 1, 0, 1]
+					]
+				},
+				{
+					baseCoor: '2460*160',
+					matrix: [
+						[1, 0, 1]
+					]
+				},
+				{
+					baseCoor: '2559*288',
+					matrix: [
+						[1, 1, 1, 1, 1, 1]
+					]
+				},
+				{
+					baseCoor: '2904*288',
+					matrix: [
+						[1, 1, 1, 1]
+					]
+				},
+				{
+					baseCoor: '2904*288',
+					matrix: [
+						[1, 1, 1, 1]
+					]
+				},
+				{
+					baseCoor: '3000*160',
+					matrix: [
+						[1, 0, 0, 0, 0, 1, 1]
+					]
+				},
+				{
+					baseCoor: '3774*160',
+					matrix: [
+						[0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1],
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+						[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+					]
+				},
+				{
+					baseCoor: '5375*160',
+					matrix: [
+						[1, 1, 0, 1]
+					]
+				},
+			],
+			wall4: [
+				{
+					baseCoor: '4286*64',
+					matrix: [
+						[0, 0, 0, 1],
+						[0, 0, 1, 1],
+						[0, 1, 1, 1],
+						[1, 1, 1, 1]
+					],
+					styles: {
+						'z-index': '2'
+					}
+				},
+				{
+					baseCoor: '4478*64',
+					matrix: [
+						[1, 0, 0, 0],
+						[1, 1, 0, 0],
+						[1, 1, 1, 0],
+						[1, 1, 1, 1]
+					],
+					styles: {
+						'z-index': '2'
+					}
+				},
+				{
+					baseCoor: '4734*64',
+					matrix: [
+						[0, 0, 0, 1, 1],
+						[0, 0, 1, 1, 1],
+						[0, 1, 1, 1, 1],
+						[1, 1, 1, 1, 1]
+					],
+					styles: {
+						'z-index': '2'
+					}
+				},
+				{
+					baseCoor: '4734*64',
+					matrix: [
+						[0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0],
+						[0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0],
+						[0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0],
+						[1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1]
+					],
+					styles: {
+						'z-index': '2'
+					}
+				},
+				{
+					baseCoor: '5792*64',
+					matrix: [
+						[0, 0, 0, 0, 0, 0, 0, 0, 1, 1],
+						[0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+						[0, 0, 0, 0, 0, 0, 1, 1, 1, 1],
+						[0, 0, 0, 0, 0, 1, 1, 1, 1, 1],
+						[0, 0, 0, 0, 1, 1, 1, 1, 1, 1],
+						[0, 0, 0, 1, 1, 1, 1, 1, 1, 1],
+						[0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+						[0, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+						[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+					],
+					styles: {
+						'z-index': '2'
+					}
+				}
+			]
+		};
+		//绘制地图
+		var unitTpl = __inline('tpl/unit.tpl');
+
+		var units = [];
+		for(var i in round11Conf){
+			for(var j=0,len=round11Conf[i].length;j<len;j++){
+				//复杂的 小元素拼成的块
+				if(round11Conf[i][j].constructor === Object){
+					var baseCoorArr = round11Conf[i][j].baseCoor.split('*') || [];
+					var matrix = round11Conf[i][j].matrix || [];
+
+					for(var my=0, mylen=matrix.length, mxlen=matrix[0] ? matrix[0].length : 0; my<mylen; my++){
+						for(var mx=0;mx<mxlen;mx++){
+							//该绘制的点
+							if(matrix[my][mx]){
+								units.push({
+									className: i,
+									left: parseInt(baseCoorArr[0]) + mx*32 + 'px',
+									bottom: parseInt(baseCoorArr[1]) + (mylen - 1 - my)*32 + 'px',
+									styles: round11Conf[i][j]['styles'] || {}
+								});
+							}
+						}
+					}
+				}
+				else{
+					var coordinate = round11Conf[i][j].split('*');
+					units.push({
+						className: i,
+						left: coordinate[0] + 'px',
+						bottom: coordinate[1] + 'px'
+					});
+				}
+			}
+		}
+
+
+		$('#content').append(unitTpl({data: units}));
+		console.timeEnd('start');
+		// var play = function(){
+		// 	var $audio = $('<audio autoplay="autoplay" src="' + __uri('/super_mario/music/bgm.mp3') + '"></audio>');
+		// };
+	</script>
+</body>
+</html>
