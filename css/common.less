@@ -195,31 +195,50 @@ a:hover{
 	width: 52px;
 	height: 338px;
 }
+.mario{
+	position: absolute;
+	left: 88px;
+	bottom: 64px;
+	background: url('../img/all.png') no-repeat -39px -1003px;
+	width: 28px;
+	height: 34px;
+}
 
 .game{
-	position: relative;
 	width: 512px;
 	height: 512px;
 	margin: 10px auto;
 	//overflow: hidden;
 	border: 1px solid #000;
-	.conent{
+	position: relative;
+	.fps{
 		position: absolute;
-		width: 10000%;
+		left: 30px;
+		top: 20px;
+		z-index: 1;
+		font-size: 14px;
+		color: white;
+	}
+	.round1-1{
+		position: relative;
+		width: 100%;
 		height: 100%;
-		left: 0;
-		bottom: 0;
-		.footer{
+		background: #5c94fc;
+		.content{
 			position: absolute;
+			width: 10000%;
+			height: 100%;
 			left: 0;
 			bottom: 0;
-			width: 100%;
-			height: 64px;
+			.footer{
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 64px;
+			}
 		}
 	}
-}
-.round1-1{
-	background: #5c94fc;
 }
 
 
